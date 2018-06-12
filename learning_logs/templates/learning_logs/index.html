@@ -1,0 +1,26 @@
+﻿{% extends "learning_logs/base.html" %}
+
+{% block header %}
+  <div class="jumbotron">
+    <h1>Track your learning.</h1>
+  </div>
+{% endblock header %}
+
+{% block content %}
+  <h2>
+    <a href="{% url 'users:register' %}">Register an account</a> to make your own Learning Log, and list the topics you are learning about.
+  </h2>
+  <h3>
+    learning_log实现功能：
+  </h3>
+  <ul>
+    <li>帐户系统，每位用户都可以创建自己的帐户，并在该帐户下新建自己的学习主题和条目；</li>
+    <li>限制访问，只允许登陆用户访问自己的学习笔记；</li>
+    <li>条目关联主题，每个条目必定属于某一个主题，类似于OneNote中的“页和分区”；</li>
+    <li>可修改，允许用户修改已经创建的主题和条目；</li>
+    <li>统一的导航栏，上设有主页、注册、登陆、登出等功能；</li>
+    <li>导航栏上的功能布局，能够随用户的登陆状态而作相应改变；</li>
+    <li>导航栏在窄屏幕的终端设备上会自动折叠，比如手机；</li>
+    <li>自定义的404和500错误页面，发生错误访问时，页面仍旧能够显示导航栏；</li>
+  </ul>
+{% endblock content %}

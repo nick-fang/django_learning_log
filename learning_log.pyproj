@@ -1,0 +1,113 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>fad3b1ab-004c-4cbd-ab1b-dcd05c11e857</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>learning_log</Name>
+    <RootNamespace>learning_log</RootNamespace>
+    <InterpreterId>CondaEnv|CondaEnv|django</InterpreterId>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <PythonRunWebServerCommandArguments>runserver --settings $(DjangoSettingsModule) %SERVER_PORT% $(CommandLineArguments)</PythonRunWebServerCommandArguments>
+    <PythonDebugWebServerCommandArguments>runserver --noreload --settings $(DjangoSettingsModule) %SERVER_PORT% $(CommandLineArguments)</PythonDebugWebServerCommandArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="learning_logs\admin.py" />
+    <Compile Include="learning_logs\apps.py" />
+    <Compile Include="learning_logs\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="learning_logs\migrations\0001_initial.py" />
+    <Compile Include="learning_logs\migrations\0002_entry.py" />
+    <Compile Include="learning_logs\migrations\__init__.py" />
+    <Compile Include="learning_logs\models.py" />
+    <Compile Include="learning_logs\tests.py" />
+    <Compile Include="learning_logs\urls.py" />
+    <Compile Include="learning_logs\views.py" />
+    <Compile Include="learning_logs\__init__.py" />
+    <Compile Include="learning_log\settings.py" />
+    <Compile Include="learning_log\urls.py" />
+    <Compile Include="learning_log\wsgi.py" />
+    <Compile Include="learning_log\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="users\admin.py" />
+    <Compile Include="users\apps.py" />
+    <Compile Include="users\migrations\__init__.py" />
+    <Compile Include="users\models.py" />
+    <Compile Include="users\tests.py" />
+    <Compile Include="users\urls.py" />
+    <Compile Include="users\views.py" />
+    <Compile Include="users\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|django" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="learning_logs\" />
+    <Folder Include="learning_logs\migrations\" />
+    <Folder Include="learning_logs\migrations\__pycache__\" />
+    <Folder Include="learning_logs\templates\" />
+    <Folder Include="learning_logs\templates\learning_logs\" />
+    <Folder Include="learning_logs\__pycache__\" />
+    <Folder Include="learning_log\" />
+    <Folder Include="learning_log\templates\" />
+    <Folder Include="learning_log\static\" />
+    <Folder Include="learning_log\__pycache__\" />
+    <Folder Include="users\" />
+    <Folder Include="users\migrations\" />
+    <Folder Include="users\templates\" />
+    <Folder Include="users\templates\users\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="learning_logs\templates\learning_logs\base.html" />
+    <Content Include="learning_logs\templates\learning_logs\edit_entry.html" />
+    <Content Include="learning_logs\templates\learning_logs\new_entry.html" />
+    <Content Include="learning_logs\templates\learning_logs\new_topic.html" />
+    <Content Include="learning_logs\templates\learning_logs\topic.html" />
+    <Content Include="learning_logs\templates\learning_logs\topics.html" />
+    <Content Include="learning_logs\templates\learning_logs\index.html" />
+    <Content Include="learning_logs\migrations\__pycache__\0001_initial.cpython-36.pyc" />
+    <Content Include="learning_logs\migrations\__pycache__\0002_entry.cpython-36.pyc" />
+    <Content Include="learning_logs\migrations\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="learning_logs\__pycache__\admin.cpython-36.pyc" />
+    <Content Include="learning_logs\__pycache__\models.cpython-36.pyc" />
+    <Content Include="learning_logs\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="learning_log\static\placeholder.txt" />
+    <Content Include="learning_log\templates\500.html" />
+    <Content Include="learning_log\templates\404.html" />
+    <Content Include="learning_log\__pycache__\settings.cpython-36.pyc" />
+    <Content Include="learning_log\__pycache__\urls.cpython-36.pyc" />
+    <Content Include="learning_log\__pycache__\wsgi.cpython-36.pyc" />
+    <Content Include="learning_log\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="requirements.txt" />
+    <Content Include="runtime.txt" />
+    <Content Include="Procfile" />
+    <Content Include=".gitignore" />
+    <Content Include="users\templates\users\login.html" />
+    <Content Include="users\templates\users\register.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
